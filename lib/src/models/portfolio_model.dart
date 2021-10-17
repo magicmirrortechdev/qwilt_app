@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 class Portfolio {
   Portfolio({
     required this.id,

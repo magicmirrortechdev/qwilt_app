@@ -3,7 +3,7 @@
 //     final portfolio = portfolioFromMap(jsonString);
 import 'dart:convert';
 
-import 'package:qwilt/src/models/portfolio_model.dart';
+import 'package:qwilt/src/models/models.dart';
 
 class Portfolios {
   Portfolios({
@@ -17,6 +17,6 @@ class Portfolios {
 
   factory Portfolios.fromMap(Map<String, dynamic> json) => Portfolios(
         portfolios: List<Portfolio>.from(
-            json["Portfolios"].map((x) => Portfolios.fromMap(x))),
+            json["Portfolios"].map((x) => Portfolio.fromMap(x))),
       );
 }

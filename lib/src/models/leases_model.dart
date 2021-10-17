@@ -3,6 +3,8 @@
 //     final leases = leasesFromMap(jsonString);
 import 'dart:convert';
 
+import 'package:qwilt/src/models/models.dart';
+
 class Leases {
   Leases({
     this.leases,

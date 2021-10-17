@@ -3,7 +3,7 @@
 //     final properties = propertiesFromMap(jsonString);
 import 'dart:convert';
 
-import 'package:qwilt/src/models/property_model.dart';
+import 'package:qwilt/src/models/models.dart';
 
 class Properties {
   Properties({

@@ -11,7 +11,10 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AuthService()),
-        ChangeNotifierProvider(create: (_) => PortfoliosService())
+        ChangeNotifierProvider(create: (_) => PortfoliosService()),
+        ChangeNotifierProvider(create: (_) => LeasesService()),
+        ChangeNotifierProvider(create: (_) => ContactsService()),
+        ChangeNotifierProvider(create: (_) => PropertiesService())
       ],
       child: QwiltApp(),
     );
@@ -31,6 +34,7 @@ class QwiltApp extends StatelessWidget {
         'login': (_) => const LoginScreen(),
         'register': (_) => const RegisterScreen(),
         'portfolios': (_) => const PortfolioScreen(),
+        'properties': (_) => const PropertiesScreen(),
       },
       theme:
           ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.grey[300]),
