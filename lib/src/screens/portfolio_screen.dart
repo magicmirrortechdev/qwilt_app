@@ -10,7 +10,6 @@ class PortfolioScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final portfolioProvider =
         Provider.of<PortfoliosService>(context, listen: true);
-    print(portfolioProvider.onCompletePortfolios);
     return Scaffold(
         appBar: AppBar(
           title: const Text("Portfolios"),

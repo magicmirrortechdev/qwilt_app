@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:qwilt/src/services/services.dart';
 import 'package:qwilt/src/widgets/navigation.dart';
 
-class PropertyScreen extends StatelessWidget {
-  const PropertyScreen({Key? key}) : super(key: key);
+class PropertiesScreen extends StatelessWidget {
+  const PropertiesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
