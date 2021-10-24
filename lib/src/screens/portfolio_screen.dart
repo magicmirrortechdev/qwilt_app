@@ -14,17 +14,30 @@ class PortfolioScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Portfolios"),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => {Navigator.pushNamed(context, 'portfolio_add')},
+          tooltip: 'Add Portfolio',
+          child: const Icon(Icons.add),
+        ),
         body: ListView.builder(
-          // Let the ListView know how many items it needs to build.
           itemCount: portfolioProvider.onCompletePortfolios.length,
-          // Provide a builder function. This is where the magic happens.
-          // Convert each item into a widget based on the type of item it is.
           itemBuilder: (context, index) {
             final item = portfolioProvider.onCompletePortfolios[index];
-
             return ListTile(
-              title: Text(item.nickname),
-              subtitle: Text(item.owner),
+              onTap: () => {Navigator.pushNamed(context, 'portfolio_edit')},
+              title: Row(children: [
+                Expanded(
+                    child: Text(
+                  item.nickname,
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+                Text(' Props: ' + item.counterProperties.toString()),
+                Icon(
+                  Icons.business,
+                  color: Colors.blueAccent,
+                ),
+              ]),
+              subtitle: Expanded(child: Text(item.owner)),
             );
           },
         ),

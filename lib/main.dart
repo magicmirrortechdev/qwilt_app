@@ -34,6 +34,8 @@ class QwiltApp extends StatelessWidget {
         'login': (_) => const LoginScreen(),
         'register': (_) => const RegisterScreen(),
         'portfolios': (_) => const PortfolioScreen(),
+        'portfolio_add': (_) => const PortfolioAddScreen(),
+        'portfolio_edit': (_) => const PortfolioEditScreen(),
         'properties': (_) => const PropertiesScreen(),
       },
       theme:

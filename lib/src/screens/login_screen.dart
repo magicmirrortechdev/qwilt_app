@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:qwilt/src/providers/login_form_provider.dart';
+import 'package:qwilt/src/providers/providers.dart';
 import 'package:qwilt/src/services/services.dart';
 import 'package:qwilt/src/ui/custom_dialog_box.dart';
 import 'package:qwilt/src/ui/input_styles.dart';
