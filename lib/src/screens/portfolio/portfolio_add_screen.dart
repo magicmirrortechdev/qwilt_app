@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:qwilt/src/providers/providers.dart';
 import 'package:qwilt/src/ui/input_styles.dart';
 import 'package:qwilt/src/widgets/card_container.dart';
+import 'package:qwilt/src/widgets/widgets.dart';
 
 class PortfolioAddScreen extends StatelessWidget {
   const PortfolioAddScreen({Key? key}) : super(key: key);
@@ -12,13 +13,20 @@ class PortfolioAddScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: const Text("Add Portfolio"),
+        elevation: 1,
+        backgroundColor: Colors.transparent,
+        title: const Text(
+          "Add Portfolio",
+        ),
       ),
-      body: Column(
-        children: [
+      body: Stack(children: <Widget>[
+        const BackgroundApp(),
+        Column(children: [
           SizedBox(
-            height: 10,
+            height: 100,
           ),
           CardContainer(
               child: Column(
@@ -35,8 +43,8 @@ class PortfolioAddScreen extends StatelessWidget {
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
             ],
           ))
-        ],
-      ),
+        ])
+      ]),
     );
   }
 }

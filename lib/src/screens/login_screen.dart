@@ -43,7 +43,7 @@ class LoginScreen extends StatelessWidget {
               TextButton(
                   onPressed: () =>
                       Navigator.pushReplacementNamed(context, 'register'),
-                  child: Text("Create new account",
+                  child: const Text("Create new account",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)))
             ],

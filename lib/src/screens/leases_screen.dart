@@ -9,7 +9,6 @@ class LeasesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final propertiesProvider =
         Provider.of<PropertiesService>(context, listen: true);
-    print(propertiesProvider.onCompleteProperties);
     return Scaffold(
         appBar: AppBar(
           title: const Text("Leases"),

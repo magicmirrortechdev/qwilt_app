@@ -4,7 +4,6 @@ import 'package:qwilt/src/providers/providers.dart';
 
 class Navigation extends StatelessWidget {
   const Navigation({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final navigationProvider = Provider.of<NavigationProvider>(context);
@@ -14,9 +13,10 @@ class Navigation extends StatelessWidget {
       currentIndex: currentIndex,
       elevation: 0,
       showUnselectedLabels: true,
-      selectedItemColor: Colors.deepOrangeAccent,
-      backgroundColor: const Color.fromRGBO(55, 57, 84, 1),
-      unselectedItemColor: const Color.fromRGBO(116, 117, 152, 1),
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: Colors.green.shade900,
+      backgroundColor: Color.fromRGBO(255, 255, 255, .25),
+      unselectedItemColor: Colors.black45,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
