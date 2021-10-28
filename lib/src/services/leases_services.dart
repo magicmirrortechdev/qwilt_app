@@ -7,7 +7,7 @@ import '../../constants.dart';
 class LeasesService extends ChangeNotifier {
   List<Lease> onCompleteLeases = [];
 
-  LeaseService() {
+  LeasesService() {
     getAll();
   }
 

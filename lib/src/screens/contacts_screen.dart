@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qwilt/src/services/services.dart';
 
-class PropertiesScreen extends StatelessWidget {
-  const PropertiesScreen({Key? key}) : super(key: key);
+class ContactsScreen extends StatelessWidget {
+  const ContactsScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class PropertiesScreen extends StatelessWidget {
     print(propertiesProvider.onCompleteProperties);
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Properties"),
+          title: const Text("Contacts"),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => {Navigator.pushNamed(context, 'property_add')},
-          tooltip: 'Add Portfolio',
+          onPressed: () => {Navigator.pushNamed(context, 'contact_add')},
+          tooltip: 'Add Contact',
           child: const Icon(Icons.add),
         ),
         body: ListView.builder(

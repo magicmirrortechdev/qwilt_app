@@ -171,7 +171,7 @@ class _RegisterForm extends StatelessWidget {
                           showDialog(
                               context: context,
                               builder: (BuildContext context) {
-                                return CustomDialogBox(
+                                return const CustomDialogBox(
                                     title: "Custom Dialog Demo",
                                     descriptions:
                                         "Hii all this is a custom dialog in flutter and  you will be use in your flutter applications",

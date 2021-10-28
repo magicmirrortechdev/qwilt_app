@@ -7,7 +7,7 @@ import '../../constants.dart';
 class PropertiesService extends ChangeNotifier {
   List<Property> onCompleteProperties = [];
 
-  PropertyService() {
+  PropertiesService() {
     getAll();
   }
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:qwilt/src/services/services.dart';
 
-class PropertiesScreen extends StatelessWidget {
-  const PropertiesScreen({Key? key}) : super(key: key);
+class LeasesScreen extends StatelessWidget {
+  const LeasesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,11 @@ class PropertiesScreen extends StatelessWidget {
     print(propertiesProvider.onCompleteProperties);
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Properties"),
+          title: const Text("Leases"),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () => {Navigator.pushNamed(context, 'property_add')},
-          tooltip: 'Add Portfolio',
+          onPressed: () => {Navigator.pushNamed(context, 'lease_add')},
+          tooltip: 'Add Lease',
           child: const Icon(Icons.add),
         ),
         body: ListView.builder(

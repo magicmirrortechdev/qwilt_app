@@ -13,7 +13,7 @@ class PortfolioEditScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Edit Portfolio"),
+        title: const Text("Edit Property"),
       ),
       body: Column(
         children: [
