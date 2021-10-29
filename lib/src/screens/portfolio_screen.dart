@@ -29,7 +29,7 @@ class PortfolioScreen extends StatelessWidget {
             child: const Icon(Icons.add),
           ),
         ),
-        body: Stack(children: <Widget>[
+        body: Stack(children: [
           const BackgroundApp(),
           ListView.builder(
             itemCount: portfolioProvider.onCompletePortfolios.length,
@@ -41,23 +41,19 @@ class PortfolioScreen extends StatelessWidget {
                   Expanded(
                       child: Text(
                     item.nickname,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white70),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   )),
                   Text(
                     ' Props: ' + item.counterProperties.toString(),
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white70),
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Icon(
                     Icons.business,
-                    color: Colors.white70,
                   ),
                 ]),
                 subtitle: Expanded(
                     child: Text(
                   item.owner,
-                  style: TextStyle(color: Colors.white70),
                 )),
               );
             },
